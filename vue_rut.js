@@ -11,13 +11,13 @@
             }
         },
         watch: {
-            rut_empresa: function (val) {
-                this.rut_empresa = this.cleanRut(this.rut_empresa);
-                let largo = this.rut_empresa.length - 1;
-                if (largo > 3) {
-                    let dv = this.rut_empresa[largo];
-                    let anteRut = this.rut_empresa.substring(0, largo).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-                    this.rut_empresa = anteRut + '-' + dv;
+            rut: function (val) {
+                this.rut = this.cleanRut(this.rut);
+                let len = this.rut.length - 1;
+                if (len > 3) {
+                    let dv = this.rut[len];
+                    let beforeDv = this.rut.substring(0, len).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+                    this.rut = beforeDv + '-' + dv;
                 }
             }
         },
