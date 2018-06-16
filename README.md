@@ -1,4 +1,4 @@
-##Vue Format Rut watch 
+## Vue Format Rut watch 
 
 Use in Vue ^2.0
 
